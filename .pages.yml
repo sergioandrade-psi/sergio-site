@@ -1,0 +1,393 @@
+# Configuração do painel de edição (Pages CMS — https://pagescms.org)
+# Cada item de "content" aparece no menu lateral do painel.
+
+media:
+  input: src/assets/img
+  output: /assets/img
+
+content:
+  # ---------------------------------------------------------------- ARTIGOS
+  - name: artigos
+    label: "Artigos"
+    type: collection
+    path: src/conteudos
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    exclude: [conteudos.11tydata.js]
+    view:
+      primary: titulo
+      fields: [titulo, tema, publicado_em]
+      sort: [publicado_em, titulo]
+      order: desc
+    fields:
+      - { name: titulo, label: "Título", type: string, required: true }
+      - name: tema
+        label: "Tema principal"
+        type: select
+        required: true
+        options:
+          values: &temas
+            - { name: ansiedade, label: "Ansiedade" }
+            - { name: depressao, label: "Depressão" }
+            - { name: relacionamentos, label: "Relacionamentos" }
+            - { name: autocontrole, label: "Autocontrole" }
+            - { name: organizacao, label: "Organização e rotina" }
+            - { name: vicios, label: "Vícios e hábitos" }
+      - name: tambem_nos_temas
+        label: "Mostrar também nas páginas destes temas"
+        type: select
+        options:
+          multiple: true
+          values: *temas
+      - { name: minutos_leitura, label: "Tempo de leitura (minutos)", type: number }
+      - { name: resumo, label: "Resumo curto (aparece na lista de artigos)", type: text }
+      - { name: linha_fina, label: "Linha fina (aparece abaixo do título no artigo)", type: text }
+      - { name: publicado_em, label: "Data de publicação", type: date, required: true }
+      - { name: atualizado_em, label: "Data da última atualização", type: date }
+      - name: publicar
+        label: "Publicar no site"
+        type: boolean
+        description: "Desmarque para salvar como rascunho, sem aparecer no site."
+      - { name: seo_titulo, label: "Título no Google (até 60 caracteres)", type: string }
+      - { name: seo_descricao, label: "Descrição no Google (até 155 caracteres)", type: text }
+      - name: body
+        label: "Texto do artigo"
+        type: rich-text
+        options:
+          format: markdown
+
+  # ---------------------------------------------------------------- TEMAS
+  - name: temas
+    label: "Temas (Como posso ajudar)"
+    type: collection
+    path: src/temas
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    exclude: [temas.11tydata.js]
+    view:
+      primary: nome
+      fields: [nome, ordem]
+      sort: [ordem]
+      order: asc
+    fields:
+      - { name: nome, label: "Nome do tema", type: string, required: true }
+      - { name: nome_curto, label: "Nome curto (filtros e etiquetas)", type: string }
+      - { name: ordem, label: "Ordem na página inicial", type: number }
+      - name: simbolo
+        label: "Ícone"
+        type: select
+        options:
+          values: &icones
+            - { name: maos-coracao, label: "Mão e coração" }
+            - { name: orelha, label: "Orelha (escuta)" }
+            - { name: lampada, label: "Lâmpada" }
+            - { name: relogio, label: "Relógio" }
+            - { name: ondas, label: "Ondas" }
+            - { name: nuvem, label: "Nuvem e sol" }
+            - { name: conversa, label: "Balões de conversa" }
+            - { name: balanca, label: "Balança" }
+            - { name: checklist, label: "Lista de tarefas" }
+            - { name: ciclo, label: "Setas em ciclo" }
+            - { name: aviao-papel, label: "Avião de papel (mensagem)" }
+            - { name: aperto-de-maos, label: "Aperto de mãos" }
+            - { name: calendario, label: "Calendário" }
+            - { name: poltrona, label: "Poltrona" }
+            - { name: notebook, label: "Notebook" }
+            - { name: cadeado, label: "Cadeado" }
+            - { name: recibo, label: "Recibo" }
+            - { name: local, label: "Local" }
+            - { name: email, label: "E-mail" }
+      - { name: resumo, label: "Resumo (aparece na página inicial)", type: text }
+      - { name: titulo, label: "Título da página", type: string }
+      - { name: introducao, label: "Introdução", type: text }
+      - name: capa
+        label: "Foto de capa"
+        type: object
+        fields:
+          - { name: imagem, label: "Foto", type: image }
+          - { name: alt, label: "Descrição da foto", type: string }
+          - { name: enquadramento, label: "Enquadramento", type: string }
+          - { name: largura, type: number, hidden: true }
+          - { name: altura, type: number, hidden: true }
+      - name: assunto_mensagem
+        label: "Assunto na mensagem do WhatsApp"
+        type: string
+        description: "Completa a frase “Vim pelo site, li sobre ___ e gostaria de saber mais…”"
+      - { name: titulo_perguntas, label: "Título das perguntas frequentes", type: string }
+      - &perguntas
+        name: perguntas
+        label: "Perguntas frequentes"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{pergunta}"
+        fields:
+          - { name: pergunta, label: "Pergunta", type: string }
+          - { name: resposta, label: "Resposta", type: text }
+      - { name: seo_titulo, label: "Título no Google", type: string }
+      - { name: seo_descricao, label: "Descrição no Google", type: text }
+      - name: body
+        label: "Texto da página"
+        type: rich-text
+        options:
+          format: markdown
+
+  # ---------------------------------------------------------------- PÁGINA INICIAL
+  - name: inicio
+    label: "Página inicial"
+    type: file
+    path: src/_data/home.json
+    format: json
+    fields:
+      - name: hero
+        label: "Topo (primeira tela)"
+        type: object
+        fields:
+          - { name: titulo, label: "Título", type: string, description: "Coloque *asteriscos* em volta da palavra que deve ficar em itálico verde." }
+          - { name: subtitulo_destaque, label: "Subtítulo — parte em negrito", type: string }
+          - { name: subtitulo, label: "Subtítulo — continuação", type: text }
+          - { name: botao, label: "Texto do botão", type: string }
+          - { name: link_secundario, label: "Texto do link ao lado do botão", type: string }
+          - &foto
+            name: foto
+            label: "Foto"
+            type: object
+            fields:
+              - { name: imagem, label: "Foto", type: image }
+              - { name: alt, label: "Descrição da foto (acessibilidade e Google)", type: string }
+              - name: enquadramento
+                label: "Enquadramento"
+                type: string
+                description: "Qual parte da foto aparece quando ela é cortada. Ex.: 50% 20% = centro, mais para o topo."
+          - { name: legenda, label: "Legenda da foto", type: string }
+          - { name: faixa, label: "Faixa de destaques", type: string, list: true }
+      - name: sobre
+        label: "Sobre"
+        type: object
+        fields:
+          - { name: titulo, label: "Título", type: string }
+          - { name: texto, label: "Texto", type: text, description: "Deixe uma linha em branco para começar um novo parágrafo." }
+          - { name: titulo_formacao, label: "Título da formação", type: string }
+          - { name: formacao, label: "Formação", type: string, list: true }
+          - *foto
+          - { name: instagram_texto, label: "Texto do link do Instagram", type: string }
+      - name: como_trabalho
+        label: "Como eu trabalho"
+        type: object
+        fields:
+          - { name: titulo, label: "Título", type: string }
+          - { name: subtitulo, label: "Subtítulo", type: string }
+          - name: itens
+            label: "Princípios"
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{titulo}" } }
+            fields:
+              - { name: icone, label: "Ícone", type: select, options: { values: *icones } }
+              - { name: titulo, label: "Título", type: string }
+              - { name: texto, label: "Texto", type: text }
+      - name: ajuda
+        label: "Como posso ajudar"
+        type: object
+        description: "Os temas desta seção são editados em “Temas”."
+        fields:
+          - { name: titulo, label: "Título", type: string }
+          - { name: texto, label: "Texto", type: text }
+          - { name: chamada, label: "Frase antes do botão", type: string }
+          - { name: botao, label: "Texto do botão", type: string }
+      - name: sentindo
+        label: "Talvez você esteja sentindo…"
+        type: object
+        fields:
+          - { name: titulo, label: "Título", type: string, description: "Use *asteriscos* para o itálico verde." }
+          - { name: texto, label: "Texto", type: text }
+          - { name: frases, label: "Frases", type: string, list: true }
+          - { name: fechamento, label: "Frase final", type: text }
+          - { name: botao, label: "Texto do botão", type: string }
+      - name: como_funciona
+        label: "Como funciona"
+        type: object
+        fields:
+          - { name: titulo, label: "Título", type: string }
+          - { name: texto, label: "Texto", type: text }
+          - name: passos
+            label: "Passos"
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{titulo}" } }
+            fields:
+              - { name: icones, label: "Ícones", type: select, options: { multiple: true, max: 2, values: *icones } }
+              - { name: titulo, label: "Título", type: string }
+              - { name: texto, label: "Texto", type: text }
+          - { name: botao, label: "Texto do botão", type: string }
+          - { name: nota, label: "Frase ao lado do botão", type: string }
+      - name: duvidas
+        label: "Dúvidas (perguntas frequentes)"
+        type: object
+        fields:
+          - { name: titulo, label: "Título", type: string }
+          - { name: texto_antes, label: "Texto antes do link", type: string }
+          - { name: texto_link, label: "Texto do link do WhatsApp", type: string }
+          - { name: texto_depois, label: "Texto depois do link", type: string }
+          - *perguntas
+      - name: conteudos
+        label: "Conteúdos"
+        type: object
+        description: "Os artigos são editados em “Artigos”."
+        fields:
+          - { name: titulo, label: "Título", type: string }
+          - { name: texto, label: "Texto", type: text }
+          - { name: quantidade, label: "Quantos artigos mostrar na página inicial", type: number }
+      - name: contato
+        label: "Contato"
+        type: object
+        description: "Endereço, telefone e redes sociais ficam em “Dados do consultório”."
+        fields:
+          - { name: titulo_consultorio, label: "Título do bloco do endereço", type: string }
+          - { name: titulo_canais, label: "Título do bloco de canais", type: string }
+          - { name: mostrar_fotos, label: "Mostrar fotos do consultório", type: boolean }
+          - name: fotos
+            label: "Fotos do consultório"
+            type: object
+            list: { max: 6 }
+            fields:
+              - { name: imagem, label: "Foto", type: image }
+              - { name: alt, label: "Descrição da foto", type: string }
+          - { name: legenda_fotos, label: "Legenda das fotos", type: string }
+
+  # ---------------------------------------------------------------- DADOS GERAIS
+  - name: dados
+    label: "Dados do consultório"
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - { name: url, label: "Endereço do site", type: string, readonly: true }
+      - { name: nome, label: "Nome", type: string }
+      - { name: sobrenome, label: "Sobrenome", type: string }
+      - { name: profissao, label: "Profissão", type: string }
+      - { name: crp, label: "CRP", type: string }
+      - { name: conselho, label: "Conselho regional", type: string }
+      - { name: nome_site, label: "Nome do site (aparece ao compartilhar links)", type: string }
+      - name: whatsapp
+        label: "WhatsApp"
+        type: object
+        fields:
+          - { name: numero, label: "Número com DDI e DDD, só números", type: string, pattern: "^[0-9]+$", description: "Ex.: 5562985257751" }
+          - { name: exibicao, label: "Número como aparece no site", type: string }
+          - { name: mensagem, label: "Mensagem automática", type: text }
+          - { name: mensagem_tema, label: "Mensagem automática nas páginas de tema", type: text, description: "{tema} é trocado pelo assunto de cada tema." }
+      - { name: email, label: "E-mail", type: string }
+      - name: instagram
+        label: "Instagram"
+        type: object
+        fields:
+          - { name: usuario, label: "Usuário (com @)", type: string }
+          - { name: url, label: "Link do perfil", type: string }
+      - name: endereco
+        label: "Endereço"
+        type: object
+        fields:
+          - { name: local, label: "Nome do local", type: string }
+          - { name: rua, label: "Rua, número e complemento", type: string }
+          - { name: rua_curta, label: "Rua e número (versão curta)", type: string }
+          - { name: bairro, label: "Bairro", type: string }
+          - { name: cidade, label: "Cidade", type: string }
+          - { name: uf, label: "Estado (sigla)", type: string }
+          - { name: cep, label: "CEP", type: string }
+          - { name: busca_mapa, label: "Endereço para o mapa e o “Como chegar”", type: string }
+          - { name: latitude, label: "Latitude", type: number }
+          - { name: longitude, label: "Longitude", type: number }
+      - name: horario
+        label: "Horário de atendimento (para o Google)"
+        type: object
+        fields:
+          - name: dias
+            label: "Dias"
+            type: select
+            options:
+              values: ["Segunda a sexta", "Segunda a sábado"]
+          - { name: abre, label: "Abre às (HH:MM)", type: string }
+          - { name: fecha, label: "Fecha às (HH:MM)", type: string }
+      - { name: resumo_menu, label: "Frase no menu do celular", type: string }
+      - name: seo
+        label: "Google e compartilhamento"
+        type: object
+        fields:
+          - { name: titulo, label: "Título da página inicial no Google", type: string }
+          - { name: descricao, label: "Descrição da página inicial no Google", type: text }
+          - { name: descricao_curta, label: "Descrição curta do consultório", type: text }
+          - { name: imagem_compartilhamento, label: "Imagem ao compartilhar o link (1200 × 630)", type: image }
+          - { name: imagem_compartilhamento_alt, label: "Descrição dessa imagem", type: string }
+      - name: analytics_ga4
+        label: "Código do Google Analytics (opcional)"
+        type: string
+        description: "Ex.: G-XXXXXXXXXX. Deixe em branco para não usar."
+      - name: rodape
+        label: "Rodapé"
+        type: object
+        fields:
+          - { name: frase, label: "Frase de encerramento", type: string, description: "Use *asteriscos* para o itálico verde." }
+          - { name: descricao, label: "Descrição", type: text }
+          - { name: aviso, label: "Aviso de urgência", type: string }
+
+  # ---------------------------------------------------------------- TEXTOS FIXOS
+  - name: textos
+    label: "Textos fixos das páginas"
+    type: file
+    path: src/_data/paginas.json
+    format: json
+    fields:
+      - name: conteudos
+        label: "Página de artigos (lista)"
+        type: object
+        fields:
+          - { name: titulo, label: "Título", type: string }
+          - { name: texto, label: "Texto", type: text }
+          - { name: seo_titulo, label: "Título no Google", type: string }
+          - { name: seo_descricao, label: "Descrição no Google", type: text }
+      - name: artigo
+        label: "Final dos artigos"
+        type: object
+        fields:
+          - { name: chamada, label: "Frase antes do botão", type: string }
+          - { name: aviso, label: "Aviso", type: text }
+          - { name: titulo_relacionados, label: "Título dos artigos relacionados", type: string }
+      - name: tema
+        label: "Páginas de tema"
+        type: object
+        fields:
+          - { name: chamada, label: "Frase antes do botão", type: string }
+          - { name: aviso, label: "Aviso", type: text }
+          - { name: lateral, label: "Linhas da coluna lateral", type: text, list: true }
+          - { name: titulo_aprofundar, label: "Título “Para se aprofundar”", type: string }
+          - { name: chamada_rodape, label: "Frase do bloco final", type: string }
+          - { name: nota_rodape, label: "Nota ao lado do botão final", type: string }
+          - { name: titulo_outros, label: "Título “Outros temas”", type: string }
+      - name: erro404
+        label: "Página não encontrada (404)"
+        type: object
+        fields:
+          - { name: titulo, label: "Título", type: string }
+          - { name: texto, label: "Texto", type: text }
+          - { name: seo_titulo, label: "Título da aba", type: string }
+          - { name: seo_descricao, label: "Descrição", type: text }
+
+  # ---------------------------------------------------------------- PRIVACIDADE
+  - name: privacidade
+    label: "Política de privacidade"
+    type: file
+    path: src/privacidade.md
+    format: yaml-frontmatter
+    fields:
+      - { name: layout, type: string, hidden: true }
+      - { name: permalink, type: string, hidden: true }
+      - { name: robots, type: string, hidden: true }
+      - { name: titulo, label: "Título", type: string }
+      - { name: linha_fina, label: "Linha fina", type: text }
+      - { name: seo_titulo, label: "Título no Google", type: string }
+      - { name: seo_descricao, label: "Descrição no Google", type: text }
+      - name: body
+        label: "Texto"
+        type: rich-text
+        options:
+          format: markdown

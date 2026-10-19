@@ -1,0 +1,71 @@
+{% extends "base.njk" %}
+{% from "icones.njk" import icone as svg with context %}
+{% block ld %}{{ ({ titulo: titulo, seo_descricao: seo_descricao, nome: nome, nome_curto: nome_curto, perguntas: perguntas }) | ldTema(page.url, site) | safe }}{% endblock %}
+{% block main %}
+{% set wa = site | whatsapp(assunto_mensagem) %}
+{% set slug = page.fileSlug %}
+
+<article class="page-top" data-header-theme="light" data-tone="creme">
+  <div class="wrap">
+    <nav class="label" aria-label="Navegação estrutural"><a class="back" href="/#ajuda" data-back>← Voltar</a><a href="/">Início</a><span>/</span><a href="/#ajuda">Como posso ajudar</a><span>/</span><span class="cur" aria-current="page">{{ nome }}</span></nav>
+    <span class="tema-ico">{{ svg(simbolo, 32) }}</span>
+    <h1 class="h1-tema" data-reveal>{{ titulo }}</h1>
+    <p class="intro" data-reveal>{{ introducao }}</p>
+{% if capa and capa.imagem %}
+    <figure class="ph r219 cover" data-reveal><img src="{{ capa.imagem }}" width="{{ capa.largura or 762 }}" height="{{ capa.altura or 542 }}" alt="{{ capa.alt }}" style="object-position:{{ capa.enquadramento or '50% 50%' }}" loading="lazy" decoding="async"></figure>
+{% endif %}
+    <div class="art-grid">
+      <aside class="art-aside">
+        <p>{{ site.nome }} {{ site.sobrenome }}<br>{{ site.profissao }} · {{ site.crp }}</p>
+{% for l in paginas.tema.lateral %}
+        <p>{{ l | quebras | safe }}</p>
+{% endfor %}
+        <p><a data-track="whatsapp" href="{{ wa }}" target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp →</a></p>
+      </aside>
+      <div class="art-body">
+{{ content | safe }}
+        <div class="art-end">
+          <p class="q">{{ paginas.tema.chamada }}</p>
+          <a data-track="whatsapp" class="btn" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ svg("whatsapp") }}Agendar pelo WhatsApp</a>
+          <p class="disc">{{ paginas.tema.aviso }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="block-palha" data-header-theme="light" data-tone="palha">
+  <div class="wrap">
+{% if perguntas and perguntas | length %}
+    <div class="faq-grid tema-faq">
+      <div class="faq-head">
+        <h2 class="h2" data-reveal>{{ titulo_perguntas }}</h2>
+        <p data-reveal>Ficou outra dúvida? <a data-track="whatsapp" class="link-u green on" href="{{ wa }}" target="_blank" rel="noopener noreferrer">Pergunte pelo WhatsApp</a>.</p>
+      </div>
+      {% include "perguntas.njk" %}
+    </div>
+{% endif %}
+{% set relacionados = collections.artigos | artigosDoTema(slug) %}
+    <div class="aprof">
+      <h2 class="h2" data-reveal>{{ paginas.tema.titulo_aprofundar }}</h2>
+      <div class="aprof-list">
+{% for a in relacionados | head(2) %}
+        <a href="{{ a.url }}" data-reveal><span class="ty">Artigo · {{ a.data.minutos_leitura }} min</span><span class="ti">{{ a.data.titulo }} <span aria-hidden="true" class="em">→</span></span></a>
+{% endfor %}
+        <a class="all" href="/conteudos/?tema={{ slug }}"><span class="ty"></span><span>Ver todos os artigos →</span></a>
+      </div>
+    </div>
+    <div class="cta-big" data-reveal>
+      <p class="q">{{ paginas.tema.chamada_rodape }}</p>
+      <div class="side"><a data-track="whatsapp" class="btn" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ svg("whatsapp") }}Agendar pelo WhatsApp</a><span>{{ paginas.tema.nota_rodape }}</span></div>
+    </div>
+    <nav class="outros" aria-label="Outros temas">
+      <h2>{{ paginas.tema.titulo_outros }}</h2>
+      <div>
+{% for t in collections.temas | semEste(page.url) %}
+        <a class="link-u" href="{{ t.url }}">{{ t.data.titulo | replace(" em " + site.endereco.cidade, "") }}</a>
+{% endfor %}
+      </div>
+    </nav>
+  </div>
+</section>
+{% endblock %}

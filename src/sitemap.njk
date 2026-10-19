@@ -1,0 +1,17 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% set hoje = "now" | hoje %}
+  <url><loc>{{ site.url }}/</loc><lastmod>{{ hoje }}</lastmod><priority>1.0</priority></url>
+  <url><loc>{{ site.url }}/conteudos/</loc><lastmod>{{ hoje }}</lastmod><priority>0.7</priority></url>
+{% for t in collections.temas %}
+  <url><loc>{{ site.url }}{{ t.url }}</loc><lastmod>{{ hoje }}</lastmod><priority>0.9</priority></url>
+{% endfor %}
+{% for a in collections.artigos %}
+  <url><loc>{{ site.url }}{{ a.url }}</loc><lastmod>{{ (a.data.atualizado_em or a.data.publicado_em) | iso }}</lastmod><priority>0.7</priority></url>
+{% endfor %}
+  <url><loc>{{ site.url }}/privacidade/</loc><lastmod>{{ hoje }}</lastmod><priority>0.3</priority></url>
+</urlset>

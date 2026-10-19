@@ -1,0 +1,31 @@
+{
+  "conteudos": {
+    "titulo": "Artigos de psicologia para ler com calma",
+    "texto": "Artigos curtos para entender melhor o que você sente. São informativos e não substituem uma avaliação profissional.",
+    "seo_titulo": "Artigos sobre saúde mental | Sérgio Andrade, Psicólogo",
+    "seo_descricao": "Artigos sobre ansiedade, depressão, relações, autocontrole, rotina e hábitos, à luz da Terapia Comportamental. Por Sérgio Andrade, psicólogo em Goiânia."
+  },
+  "artigo": {
+    "chamada": "Se este texto tocou em algo seu, podemos conversar.",
+    "aviso": "Texto informativo, que não substitui avaliação ou acompanhamento psicológico.",
+    "titulo_relacionados": "Continue lendo"
+  },
+  "tema": {
+    "chamada": "Se você se reconheceu aqui, podemos conversar.",
+    "aviso": "Conteúdo informativo, que não substitui avaliação ou acompanhamento psicológico. Em situação de crise, ligue 188 (CVV, 24 horas) ou 192 (SAMU).",
+    "lateral": [
+      "Terapia Comportamental\nAdultos e adolescentes",
+      "Presencial no Setor Marista, em Goiânia, e online"
+    ],
+    "titulo_aprofundar": "Para se aprofundar",
+    "chamada_rodape": "Atendimento presencial no Setor Marista, em Goiânia, ou online.",
+    "nota_rodape": "A primeira mensagem pode ser só para tirar dúvidas.",
+    "titulo_outros": "Outros temas"
+  },
+  "erro404": {
+    "titulo": "Este caminho não leva a lugar algum.",
+    "texto": "Talvez o endereço tenha mudado, ou o link tenha se perdido no caminho. Acontece. O restante do site continua no mesmo lugar, e você pode recomeçar daqui, sem pressa.",
+    "seo_titulo": "Página não encontrada | Sérgio Andrade, Psicólogo",
+    "seo_descricao": "Esta página não existe ou mudou de endereço. Volte ao início do site de Sérgio Andrade, psicólogo em Goiânia e online."
+  }
+}

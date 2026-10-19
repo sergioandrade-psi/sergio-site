@@ -1,0 +1,54 @@
+{% from "icones.njk" import icone with context %}
+{% set pagina_url = page.url %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ seo_titulo }}</title>
+<meta name="description" content="{{ seo_descricao }}">
+{% if robots %}<meta name="robots" content="{{ robots }}">
+{% endif %}
+{% if not semCanonical %}<link rel="canonical" href="{{ site.url }}{{ pagina_url }}">
+{% endif %}
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#5E7A2E">
+<meta property="og:type" content="{{ og_tipo or 'website' }}">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="{{ site.nome_site }}">
+<meta property="og:title" content="{{ seo_titulo }}">
+<meta property="og:description" content="{{ seo_descricao }}">
+<meta property="og:url" content="{{ site.url }}{{ pagina_url }}">
+<meta property="og:image" content="{{ site.url }}{{ site.seo.imagem_compartilhamento }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.seo.imagem_compartilhamento_alt }}">
+{% block meta_extra %}{% endblock %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ seo_titulo }}">
+<meta name="twitter:description" content="{{ seo_descricao }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.seo.imagem_compartilhamento }}">
+{% if site.analytics_ga4 %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics_ga4 }}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site.analytics_ga4 }}',{anonymize_ip:true});</script>
+{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,30;1,9..144,300..500,30&amp;family=Instrument+Sans:wght@400..600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,30;1,9..144,300..500,30&amp;family=Instrument+Sans:wght@400..600&amp;display=swap"></noscript>
+<link rel="stylesheet" href="/assets/css/style.min.css">
+<script>(function(r){r.classList.add(window.matchMedia('(prefers-reduced-motion: reduce)').matches?'reduced':'motion');setTimeout(function(){if(!window.__sa)r.classList.remove('motion');},3000);})(document.documentElement);</script>
+<script src="/assets/js/main.min.js" defer></script>
+{% block ld %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+{% include "cabecalho.njk" %}
+<main id="principal">
+{% block main %}{% endblock %}
+</main>
+{% include "rodape.njk" %}
+<a data-track="whatsapp" class="float-wa{% if floatOculto %} is-hidden{% endif %}"{% if floatOculto %} tabindex="-1"{% endif %} href="{{ site | whatsapp(assunto_whatsapp) }}" target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp">{{ icone("whatsapp", 28) }}<span class="txt">WhatsApp</span></a>
+<script>document.addEventListener('click',function(e){var a=e.target.closest('[data-track="whatsapp"]');if(!a)return;var s=a.closest('section[id],header,footer');var o=a.classList.contains('float-wa')?'botao-flutuante':s?(s.id||s.tagName.toLowerCase()):'pagina';var d={secao:o,pagina:location.pathname};if(window.gtag)gtag('event','clique_whatsapp',d);if(window.plausible)plausible('clique_whatsapp',{props:d});(window.dataLayer=window.dataLayer||[]).push(Object.assign({event:'clique_whatsapp'},d));});</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "url": "https://www.sergioandradepsi.com.br",
+  "nome": "Sérgio",
+  "sobrenome": "Andrade",
+  "profissao": "Psicólogo",
+  "crp": "CRP 09/011607",
+  "conselho": "Conselho Regional de Psicologia da 9ª Região (Goiás)",
+  "nome_site": "Sérgio Andrade · Psicólogo em Goiânia",
+  "whatsapp": {
+    "numero": "5562985257751",
+    "exibicao": "(62) 98525-7751",
+    "mensagem": "Olá, Sérgio! Vim pelo site e gostaria de saber mais sobre o atendimento.",
+    "mensagem_tema": "Olá, Sérgio! Vim pelo site, li sobre {tema} e gostaria de saber mais sobre o atendimento."
+  },
+  "email": "psi.sergioandrade@gmail.com",
+  "instagram": {
+    "usuario": "@sergio_andradi",
+    "url": "https://www.instagram.com/sergio_andradi/"
+  },
+  "endereco": {
+    "local": "Instituto Afeto",
+    "rua": "Rua 147, nº 299, Qd. 65, Lt. 11",
+    "rua_curta": "Rua 147, nº 299",
+    "bairro": "Setor Marista",
+    "cidade": "Goiânia",
+    "uf": "GO",
+    "cep": "74170-100",
+    "busca_mapa": "Instituto Afeto, Rua 147, 299, Setor Marista, Goiânia - GO, 74170-100",
+    "latitude": -16.7046,
+    "longitude": -49.2617
+  },
+  "horario": {
+    "dias": "Segunda a sexta",
+    "abre": "08:00",
+    "fecha": "20:00"
+  },
+  "resumo_menu": "CRP 09/011607 · Setor Marista, Goiânia, e online",
+  "seo": {
+    "titulo": "Psicólogo em Goiânia | Sérgio Andrade · Setor Marista e Online",
+    "descricao": "Psicólogo em Goiânia, no Setor Marista, e online. Terapia Comportamental para adultos e adolescentes, com Sérgio Andrade. Agende pelo WhatsApp.",
+    "descricao_curta": "Psicólogo em Goiânia, no Setor Marista, e online. Terapia Comportamental para adultos e adolescentes.",
+    "imagem_compartilhamento": "/assets/img/og-image.png",
+    "imagem_compartilhamento_alt": "Sérgio Andrade, psicólogo em Goiânia, ao lado da frase “Terapia para entender o que você sente”."
+  },
+  "analytics_ga4": "",
+  "rodape": {
+    "frase": "A porta fica aberta. Entre quando for a *hora.*",
+    "descricao": "Psicólogo em Goiânia, no Setor Marista, e psicólogo online. Terapia Comportamental para adultos e adolescentes.",
+    "aviso": "Este não é um serviço de urgência. Em crise, ligue 188 (CVV) ou 192 (SAMU)."
+  }
+}

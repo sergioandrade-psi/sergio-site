@@ -1,0 +1,19 @@
+{% set ini = "" if page.url == "/" else "/" %}
+<header class="site-header" data-theme="light">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="{{ site.nome }} {{ site.sobrenome }}, psicólogo — início"><span class="brand-name">{{ site.nome }} <em>{{ site.sobrenome }}</em></span><span class="brand-crp">{{ site.profissao }} · {{ site.crp }}</span></a>
+    <nav class="main-nav" aria-label="Principal">
+{% for m in menu %}
+      <a href="{{ ini }}#{{ m[0] }}" data-nav="{{ m[0] }}">{{ m[1] }}</a>
+{% endfor %}
+    </nav>
+    <a data-track="whatsapp" class="btn-header" href="{{ site | whatsapp(assunto_whatsapp) }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp", 20) }}<span class="long">Agendar pelo WhatsApp</span><span class="short">Agendar</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu"><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="menu-mobile" aria-label="Menu">
+{% for m in menu %}
+    <a href="{{ ini }}#{{ m[0] }}" data-nav="{{ m[0] }}"><span>{{ loop.index | doisDigitos }}</span>{{ m[1] }}</a>
+{% endfor %}
+    <p>{{ site.resumo_menu }}</p>
+  </nav>
+</header>

@@ -1,0 +1,5 @@
+      <div class="faq" data-reveal>
+{% for p in perguntas %}
+        <div class="faq-item"><h3><button type="button" aria-expanded="{{ 'true' if loop.first else 'false' }}" aria-controls="faq-{{ loop.index0 }}"><span>{{ p.pergunta }}</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-panel{{ ' open' if loop.first }}" id="faq-{{ loop.index0 }}"><div><p>{{ p.resposta }}</p></div></div></div>
+{% endfor %}
+      </div>

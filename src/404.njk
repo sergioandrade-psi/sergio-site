@@ -1,0 +1,24 @@
+---
+permalink: /404.html
+robots: "noindex, follow"
+semCanonical: true
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  seo_titulo: "{{ paginas.erro404.seo_titulo }}"
+  seo_descricao: "{{ paginas.erro404.seo_descricao }}"
+---
+{% extends "base.njk" %}
+{% block main %}
+
+<section class="nf" data-header-theme="light" data-tone="palha">
+  <div class="wrap">
+    <div class="label"><span class="n">404</span><span>Página não encontrada</span></div>
+    <h1 class="display" data-reveal>{{ paginas.erro404.titulo | destaque | safe }}</h1>
+    <p data-reveal>{{ paginas.erro404.texto }}</p>
+    <div class="actions" data-reveal>
+      <a class="btn" href="/">Voltar ao início</a>
+      <a class="link-u" href="/conteudos/">Ver os conteúdos →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

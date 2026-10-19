@@ -1,0 +1,14 @@
+{% extends "base.njk" %}
+{% block main %}
+
+<section class="sec priv" data-header-theme="light" data-tone="creme">
+  <div class="wrap">
+    <nav class="label" aria-label="Navegação estrutural"><a href="/">Início</a><span>/</span><span>Privacidade</span></nav>
+    <h1 class="art-h1" data-reveal>{{ titulo }}</h1>
+    <p class="dek" data-reveal>{{ linha_fina }}</p>
+    <div class="priv-body art-body">
+{{ content | safe }}
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.njk" %}
+{% from "icones.njk" import icone, cartao with context %}
+{% set tema_atual = collections.temas | temaPorSlug(tema) %}
+{% block meta_extra %}
+<meta property="article:published_time" content="{{ publicado_em | iso }}">
+<meta property="article:modified_time" content="{{ (atualizado_em or publicado_em) | iso }}">
+<meta property="article:author" content="{{ site.nome }} {{ site.sobrenome }}">
+{% endblock %}
+{% block ld %}{{ ({ titulo: titulo, linha_fina: linha_fina, publicado_em: publicado_em, atualizado_em: atualizado_em }) | ldArtigo(page.url, site, tema_atual.data.nome if tema_atual else tema) | safe }}{% endblock %}
+{% block main %}
+
+<article class="page-top art-page" data-header-theme="light" data-tone="creme">
+  <div class="wrap">
+    <nav class="art-crumb" aria-label="Navegação estrutural"><a href="/conteudos/">Conteúdos</a>{% if tema_atual %}<span aria-hidden="true">/</span><a href="{{ tema_atual.url }}">{{ tema_atual.data.nome_curto }}</a>{% endif %}</nav>
+    <header class="art-head" data-reveal>
+      <p class="art-kicker">{{ tema_atual.data.nome_curto if tema_atual }} · {{ minutos_leitura }} min de leitura</p>
+      <h1 class="art-h1">{{ titulo }}</h1>
+      <p class="dek">{{ linha_fina }}</p>
+      <p class="art-byline">Por {{ site.nome }} {{ site.sobrenome }} · {{ site.profissao }}, {{ site.crp }} · Publicado em <time datetime="{{ publicado_em | iso }}">{{ publicado_em | dataExtenso }}</time></p>
+    </header>
+    <div class="art-grid art-col">
+      <div class="art-body">
+{{ content | safe }}
+        <div class="art-end">
+          <p class="q">{{ paginas.artigo.chamada }}</p>
+          <a data-track="whatsapp" class="btn" href="{{ site | whatsapp }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp") }}Agendar pelo WhatsApp</a>
+          <p class="disc">{{ paginas.artigo.aviso }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+{% set outros = collections.artigos | outrosArtigos(page.url, 2) %}
+{% if outros | length %}
+<section class="rel-sec" data-header-theme="light" data-tone="palha">
+  <div class="wrap">
+    <div class="label"><h2 class="lbl-h">{{ paginas.artigo.titulo_relacionados }}</h2><a class="more" href="/conteudos/">Todos os conteúdos →</a></div>
+    <div class="alist">
+{% for a in outros %}
+{{ cartao(a, collections.temas) }}
+{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endblock %}

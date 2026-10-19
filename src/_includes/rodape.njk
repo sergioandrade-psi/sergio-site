@@ -1,0 +1,27 @@
+{% set ini = "" if page.url == "/" else "/" %}
+{% set e = site.endereco %}
+<footer class="site-footer" data-header-theme="dark" data-tone="palha">
+  <div class="wrap">
+    <p class="f-quote" data-reveal>{{ site.rodape.frase | destaque | safe }}</p>
+    <div class="f-cols">
+      <div class="f-brand">
+        <p class="f-name">{{ site.nome }} <em>{{ site.sobrenome }}</em></p>
+        <p class="small">{{ site.profissao }} · {{ site.crp }}<br>{{ site.rodape.descricao }}</p>
+      </div>
+      <nav class="f-nav" aria-label="Rodapé">
+        <span class="f-head">Navegação</span>
+{% for m in menu %}
+        <a class="link-u" href="{{ ini }}#{{ m[0] }}">{{ m[1] }}</a>
+{% endfor %}
+      </nav>
+      <nav class="f-temas" aria-label="Temas">
+        <span class="f-head">Temas</span>
+{% for t in collections.temas %}
+        <a class="link-u" href="{{ t.url }}">{{ t.data.titulo | replace(" em " + site.endereco.cidade, "") }}</a>
+{% endfor %}
+      </nav>
+    </div>
+    <p class="f-line">{{ e.local }} · {{ e.rua }}, {{ e.bairro }}, {{ e.cidade }} – {{ e.uf }}, {{ e.cep }} · <a data-track="whatsapp" class="link-u" href="{{ site | whatsapp }}" target="_blank" rel="noopener noreferrer">{{ site.whatsapp.exibicao }}</a> · <a class="link-u" href="mailto:{{ site.email }}">{{ site.email }}</a> · <a class="link-u" href="{{ site.instagram.url }}" target="_blank" rel="noopener noreferrer">{{ site.instagram.usuario }}</a></p>
+    <p class="f-bottom">© {{ "now" | ano }} {{ site.nome }} {{ site.sobrenome }} · {{ site.crp }} · <a class="link-u" href="/privacidade/">Política de privacidade</a> · {{ site.rodape.aviso }}</p>
+  </div>
+</footer>

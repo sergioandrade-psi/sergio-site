@@ -1,0 +1,16 @@
+{% macro icone(nome, tamanho=22) %}{% set ic = icones[nome] %}{% if ic %}<svg class="icon" width="{{ tamanho }}" height="{{ tamanho }}" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false">{% for d in ic.paths %}<path d="{{ d }}"/>{% endfor %}</svg>{% endif %}{% endmacro %}
+{% macro seta() %}<svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor">{% for d in icones.seta.paths %}<path d="{{ d }}"/>{% endfor %}</svg>{% endmacro %}
+{% macro cartao(a, temas) %}{% set t = temas | temaPorSlug(a.data.tema) %}
+        <a class="card arow" data-tema="{{ a.data.tema }}" href="{{ a.url }}">
+          <span class="arow-b"><span class="arow-t">{{ t.data.nome_curto if t else a.data.tema }} · {{ a.data.minutos_leitura }} min</span><h3>{{ a.data.titulo }}</h3><span class="arow-s">{{ a.data.resumo }}</span><span class="arow-cta-m">Ler artigo →</span></span>
+          <span class="arow-m"><span class="arow-cta">Ler artigo</span><span class="arow-c" aria-hidden="true">{{ seta() }}</span></span>
+        </a>
+{% endmacro %}
+{% macro filtros(id, temas, url=false) %}
+<div class="filters" role="group" aria-label="Filtrar por tema" data-filters="{{ id }}"{% if url %} data-url{% endif %}>
+        <button type="button" data-filter="todos" aria-pressed="true">Todos</button>
+{% for t in temas %}
+        <button type="button" data-filter="{{ t.page.fileSlug }}" data-href="{{ t.url }}" data-title="{{ t.data.nome }}" aria-pressed="false">{{ t.data.nome_curto }}</button>
+{% endfor %}
+      </div>
+{% endmacro %}

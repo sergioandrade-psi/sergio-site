@@ -1,0 +1,197 @@
+{
+  "hero": {
+    "titulo": "Terapia para entender o que você *sente* e mudar o que é possível mudar.",
+    "subtitulo_destaque": "Psicólogo em Goiânia · Setor Marista e online.",
+    "subtitulo": "Terapia Comportamental para adultos e adolescentes, num ritmo que respeita o seu.",
+    "botao": "Agendar pelo WhatsApp",
+    "link_secundario": "Como funciona a terapia",
+    "foto": {
+      "imagem": "/assets/img/psicologo-sergio-andrade-goiania.webp",
+      "alt": "Sérgio Andrade, psicólogo, sentado em uma poltrona clara diante de uma estante de livros, sorrindo",
+      "enquadramento": "50% 22%"
+    },
+    "legenda": "Sérgio Andrade · Psicólogo",
+    "faixa": [
+      "Terapia Comportamental",
+      "CRP 09/011607",
+      "Adultos e adolescentes",
+      "Presencial e online"
+    ]
+  },
+  "sobre": {
+    "titulo": "Prazer, sou o Sérgio.",
+    "texto": "Psicólogo há 10 anos, mestre e doutorando em Ciências da Saúde e especialista em Clínica Comportamental. Trabalho com a Terapia Comportamental, uma abordagem que busca compreender como a sua história, o seu ambiente e as suas experiências se relacionam com o que você sente e faz hoje.\n\nNa terapia, construímos juntos um entendimento claro do que está acontecendo e caminhos práticos para lidar com isso, sempre respeitando o seu ritmo. Atendo adultos e adolescentes, presencialmente no Setor Marista e online.",
+    "titulo_formacao": "Formação",
+    "formacao": [
+      "Mestre em Ciências da Saúde",
+      "Doutorando em Ciências da Saúde",
+      "Especialista em Clínica Comportamental"
+    ],
+    "foto": {
+      "imagem": "/assets/img/sergio-andrade-psicologo-setor-marista.webp",
+      "alt": "Retrato de Sérgio Andrade com camisa de linho clara, em ambiente iluminado",
+      "enquadramento": "50% 28%"
+    },
+    "instagram_texto": "Conheça mais do meu dia a dia"
+  },
+  "como_trabalho": {
+    "titulo": "Como eu trabalho",
+    "subtitulo": "Quatro princípios que orientam cada atendimento.",
+    "itens": [
+      {
+        "icone": "maos-coracao",
+        "titulo": "Acolhimento",
+        "texto": "Um espaço para falar do que for preciso, sem julgamento e no seu tempo."
+      },
+      {
+        "icone": "orelha",
+        "titulo": "Escuta atenta",
+        "texto": "Atenção ao que você conta e ao contexto em que isso acontece."
+      },
+      {
+        "icone": "lampada",
+        "titulo": "Estratégias práticas",
+        "texto": "Entendemos juntos o que mantém a dificuldade e testamos mudanças no dia a dia."
+      },
+      {
+        "icone": "relogio",
+        "titulo": "Respeito ao seu tempo",
+        "texto": "Objetivos e ritmo combinados com você e revistos ao longo do processo."
+      }
+    ]
+  },
+  "ajuda": {
+    "titulo": "Seis temas que chegam com frequência",
+    "texto": "Cada pessoa chega com uma história própria. Estes são alguns dos assuntos que mais acompanho no consultório. Se o seu não aparece aqui, escreva mesmo assim.",
+    "chamada": "Reconheceu algo seu em um desses temas? Podemos conversar.",
+    "botao": "Falar pelo WhatsApp"
+  },
+  "sentindo": {
+    "titulo": "Talvez você esteja *sentindo*…",
+    "texto": "Não é preciso estar em crise para procurar terapia. Às vezes é um incômodo que vem se acumulando, e que fica mais leve quando ganha nome.",
+    "frases": [
+      "que a cabeça não desliga, nem na hora de dormir;",
+      "que vive adiando o que importa, e se cobra por isso;",
+      "que está sempre cansado, mesmo depois de descansar;",
+      "que, perto dos outros, nunca sabe bem o que dizer;",
+      "que reage de um jeito e se arrepende logo depois;",
+      "que um hábito passou a ocupar espaço demais;",
+      "que as coisas perderam a graça;",
+      "que algo precisa mudar, mas não sabe por onde começar."
+    ],
+    "fechamento": "Se alguma dessas frases fez sentido, talvez seja um bom momento para conversar.",
+    "botao": "Falar pelo WhatsApp"
+  },
+  "como_funciona": {
+    "titulo": "Do primeiro contato à rotina das sessões",
+    "texto": "Começar terapia levanta perguntas práticas. Este é o caminho, para você saber o que esperar antes mesmo de escrever.",
+    "passos": [
+      {
+        "icones": [
+          "aviao-papel"
+        ],
+        "titulo": "O primeiro contato",
+        "texto": "Você envia uma mensagem pelo WhatsApp. Respondo dúvidas sobre valores, horários e modalidade, e combinamos a primeira sessão, sem compromisso de continuidade."
+      },
+      {
+        "icones": [
+          "aperto-de-maos"
+        ],
+        "titulo": "A primeira sessão",
+        "texto": "Uma conversa inicial para entender a sua demanda, um pouco da sua história e o que você espera. Também combinamos como o processo vai funcionar."
+      },
+      {
+        "icones": [
+          "calendario"
+        ],
+        "titulo": "Frequência e duração",
+        "texto": "Em geral, as sessões são semanais e em horário fixo. Duração e frequência são combinadas no início e podem mudar ao longo do processo, sempre em comum acordo."
+      },
+      {
+        "icones": [
+          "poltrona",
+          "notebook"
+        ],
+        "titulo": "Presencial ou online",
+        "texto": "No Instituto Afeto, no Setor Marista, ou por videochamada, de onde você estiver. É possível combinar as duas modalidades."
+      },
+      {
+        "icones": [
+          "cadeado"
+        ],
+        "titulo": "Sigilo profissional",
+        "texto": "O que é dito em sessão fica entre nós, como determina o Código de Ética Profissional do Psicólogo."
+      },
+      {
+        "icones": [
+          "recibo"
+        ],
+        "titulo": "Atendimento particular",
+        "texto": "Não atendo por convênio. A cada pagamento, emito recibo para a declaração do imposto de renda ou para pedido de reembolso ao plano."
+      }
+    ],
+    "botao": "Dar o primeiro passo",
+    "nota": "A primeira mensagem pode ser só para tirar dúvidas."
+  },
+  "duvidas": {
+    "titulo": "Perguntas frequentes",
+    "texto_antes": "Não encontrou o que procurava?",
+    "texto_link": "Pergunte pelo WhatsApp",
+    "texto_depois": "Nenhuma dúvida é pequena demais.",
+    "perguntas": [
+      {
+        "pergunta": "Como sei se preciso de terapia?",
+        "resposta": "Não é preciso estar em crise. Se algo vem incomodando há algum tempo, afetando o sono, os estudos, o trabalho ou as relações, ou se você quer entender melhor o que sente, já é um bom motivo para conversar. A primeira sessão também serve para avaliarmos isso juntos."
+      },
+      {
+        "pergunta": "O que é Terapia Comportamental?",
+        "resposta": "É uma abordagem baseada na Análise do Comportamento, uma ciência que estuda como as pessoas aprendem e se relacionam com o ambiente. Na terapia, investigamos como a sua história e o seu contexto atual se ligam ao que você sente e faz, e construímos juntos mudanças práticas, com objetivos claros e revisados ao longo do processo."
+      },
+      {
+        "pergunta": "Quanto tempo dura o processo?",
+        "resposta": "Varia de pessoa para pessoa e depende do que motivou a busca. Não existe um prazo fixo. Ao longo do processo, revisamos juntos os objetivos e o que já mudou, e decidimos com clareza os próximos passos."
+      },
+      {
+        "pergunta": "Atende adolescentes? Como funciona com os responsáveis?",
+        "resposta": "Sim. A primeira conversa é com os responsáveis, para entender o que os preocupa e explicar como o atendimento vai funcionar. O que o adolescente conta em sessão fica em sigilo, e é essa confiança que permite que ele fale com franqueza. Os responsáveis são informados sempre que houver risco à segurança do adolescente. Encontros com a família são combinados com antecedência e com o conhecimento dele."
+      },
+      {
+        "pergunta": "Qual o valor da sessão?",
+        "resposta": "O valor e as formas de pagamento são informados pelo WhatsApp. Emito recibo para reembolso e imposto de renda."
+      },
+      {
+        "pergunta": "Como agendar?",
+        "resposta": "Basta enviar uma mensagem pelo WhatsApp. Respondo dúvidas sobre valores, horários e modalidade, e combinamos a primeira sessão."
+      },
+      {
+        "pergunta": "Atende emergências?",
+        "resposta": "Este não é um serviço de atendimento de urgência. Em situações de crise, procure o CVV pelo telefone 188 (24h, gratuito) ou o SAMU pelo 192. Se você está passando por um momento difícil, não precisa esperar: essas linhas estão disponíveis a qualquer hora."
+      }
+    ]
+  },
+  "conteudos": {
+    "titulo": "Para ler com calma",
+    "texto": "Artigos curtos para entender melhor o que você sente. São informativos e não substituem uma avaliação profissional.",
+    "quantidade": 6
+  },
+  "contato": {
+    "titulo_consultorio": "Consultório",
+    "titulo_canais": "Canais",
+    "fotos": [
+      {
+        "imagem": "/assets/img/consultorio-1.webp",
+        "alt": "Sala de atendimento com sofá, poltrona e estante iluminada no Instituto Afeto, Setor Marista"
+      },
+      {
+        "imagem": "/assets/img/consultorio-2.webp",
+        "alt": "Poltrona de atendimento ao lado da janela, no consultório de psicologia"
+      },
+      {
+        "imagem": "/assets/img/consultorio-5.webp",
+        "alt": "Mesa do consultório com caneca e caderno de anotações"
+      }
+    ],
+    "legenda_fotos": "O consultório · Instituto Afeto, Setor Marista",
+    "mostrar_fotos": true
+  }
+}

@@ -1,0 +1,22 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Endereços antigos (do site exportado) continuam funcionando
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/temas/:tema/index.html"
+  to = "/temas/:tema/"
+  status = 301
+
+[[redirects]]
+  from = "/conteudos/:artigo/index.html"
+  to = "/conteudos/:artigo/"
+  status = 301

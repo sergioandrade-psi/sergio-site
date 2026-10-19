@@ -1,0 +1,29 @@
+---
+permalink: /conteudos/
+eleventyComputed:
+  seo_titulo: "{{ paginas.conteudos.seo_titulo }}"
+  seo_descricao: "{{ paginas.conteudos.seo_descricao }}"
+---
+{% extends "base.njk" %}
+{% from "icones.njk" import icone, cartao, filtros with context %}
+{% block ld %}{{ collections.artigos | ldColecao(site) | safe }}{% endblock %}
+{% block main %}
+
+<section class="page-top" data-header-theme="light" data-tone="palha" style="padding-bottom:clamp(104px,12vw,160px)">
+  <div class="wrap">
+    <nav class="label" aria-label="Navegação estrutural"><a href="/">Início</a><span>/</span><span class="cur" aria-current="page">Conteúdos</span></nav>
+    <div class="split">
+      <h1 class="h2" data-reveal>{{ paginas.conteudos.titulo | destaque | safe }}</h1>
+      <p data-reveal>{{ paginas.conteudos.texto }}</p>
+    </div>
+    {{ filtros("cards-all", collections.temas, true) }}
+      <h2 class="sr-only">Todos os artigos</h2>
+      <div class="alist" id="cards-all">
+{% for a in collections.artigos %}
+{{ cartao(a, collections.temas) }}
+{% endfor %}
+      </div>
+      <p class="more-tema" data-more="cards-all" hidden>Mais sobre este tema: <a class="link-u green on" href="/conteudos/">Conteúdos →</a></p>
+  </div>
+</section>
+{% endblock %}

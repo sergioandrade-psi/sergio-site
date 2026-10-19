@@ -1,0 +1,199 @@
+---
+permalink: /
+eleventyComputed:
+  seo_titulo: "{{ site.seo.titulo }}"
+  seo_descricao: "{{ site.seo.descricao }}"
+floatOculto: true
+---
+{% extends "base.njk" %}
+{% from "icones.njk" import icone, cartao, filtros with context %}
+{% block ld %}{{ home | ldHome(site, collections.temas) | safe }}{% endblock %}
+{% block main %}
+{% set wa = site | whatsapp %}
+{% set e = site.endereco %}
+
+<section id="inicio" class="hero" data-header-theme="light" data-tone="creme">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1 class="display" data-reveal>{{ home.hero.titulo | destaque | safe }}</h1>
+        <p class="hero-sub" data-reveal><strong>{{ home.hero.subtitulo_destaque }}</strong> {{ home.hero.subtitulo }}</p>
+        <div class="actions" data-reveal>
+          <a data-track="whatsapp" class="btn" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp") }}{{ home.hero.botao }}</a>
+          <a class="link-u" href="#como-funciona">{{ home.hero.link_secundario }} →</a>
+        </div>
+      </div>
+      <figure class="hero-fig" data-reveal>
+        <div class="frame"><div class="ph"><img src="{{ home.hero.foto.imagem }}" width="558" height="697" alt="{{ home.hero.foto.alt }}" style="object-position:{{ home.hero.foto.enquadramento or '50% 50%' }}" onerror="this.remove()" fetchpriority="high" decoding="async"></div></div>
+        <figcaption class="caps">{{ home.hero.legenda }}</figcaption>
+      </figure>
+    </div>
+    <p class="rail" data-reveal>{% for f in home.hero.faixa %}<span>{{ f }}</span>{% endfor %}</p>
+  </div>
+</section>
+
+<section id="sobre" class="sec" data-header-theme="light" data-tone="creme">
+  <div class="wrap">
+    <div class="label"><span class="n">01</span><span>Sobre</span></div>
+    <div class="sobre-grid">
+      <figure class="sobre-fig" data-reveal><div class="frame"><div class="ph"><img src="{{ home.sobre.foto.imagem }}" width="558" height="697" alt="{{ home.sobre.foto.alt }}" style="object-position:{{ home.sobre.foto.enquadramento or '50% 50%' }}" onerror="this.remove()" loading="lazy" decoding="async"></div></div></figure>
+      <div class="sobre-text">
+        <h2 class="h2" data-reveal>{{ home.sobre.titulo | destaque | safe }}</h2>
+        <div class="prose-lg" data-reveal>
+          {{ home.sobre.texto | paragrafos | safe }}
+        </div>
+        <div class="creds" data-reveal>
+          <div>
+            <h3>{{ home.sobre.titulo_formacao }}</h3>
+{% for f in home.sobre.formacao %}
+            <p class="form-item">{{ f }}</p>
+{% endfor %}
+          </div>
+        </div>
+        <a class="ig-link" href="{{ site.instagram.url }}" target="_blank" rel="noopener noreferrer" data-reveal>{{ icone("instagram") }}{{ home.sobre.instagram_texto }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="princ-sec" aria-label="{{ home.como_trabalho.titulo }}" data-header-theme="light" data-tone="creme">
+  <div class="wrap">
+    <div class="princ-head" data-reveal>
+      <h3>{{ home.como_trabalho.titulo }}</h3>
+      <p>{{ home.como_trabalho.subtitulo }}</p>
+    </div>
+    <ul class="principios" data-reveal>
+{% for p in home.como_trabalho.itens %}
+          <li>{{ icone(p.icone, 32) }}<span class="t">{{ p.titulo }}</span><span class="d">{{ p.texto }}</span></li>
+{% endfor %}
+        </ul>
+  </div>
+</section>
+
+<section id="ajuda" class="sec sec-dark" data-header-theme="dark" data-tone="palha">
+  <div class="wrap">
+    <div class="label"><span class="n">02</span><span>Como posso ajudar</span></div>
+    <div class="split" style="margin-bottom:clamp(40px,5vw,72px)">
+      <h2 class="h2" data-reveal>{{ home.ajuda.titulo | destaque | safe }}</h2>
+      <p data-reveal>{{ home.ajuda.texto }}</p>
+    </div>
+    <ol class="temas">
+{% for t in collections.temas %}
+      <li data-reveal><a href="{{ t.url }}"><span class="ni"><span class="n">{{ loop.index | doisDigitos }}</span>{{ icone(t.data.simbolo, 32) }}</span><span class="tt">{{ t.data.nome }}</span><span class="tx"><span class="s">{{ t.data.resumo }}</span><span class="m">Saiba mais →</span></span></a></li>
+{% endfor %}
+    </ol>
+    <div class="cta-row" data-reveal>
+      <p>{{ home.ajuda.chamada }}</p>
+      <a data-track="whatsapp" class="btn" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp") }}{{ home.ajuda.botao }}</a>
+    </div>
+  </div>
+</section>
+
+<section id="sentindo" class="sentindo" data-header-theme="light" data-tone="palha" aria-label="{{ home.sentindo.titulo | replace('*', '') }}">
+  <div class="wrap">
+    <div class="sent-grid">
+      <div class="sent-head">
+        <h2 class="h2" data-reveal>{{ home.sentindo.titulo | destaque | safe }}</h2>
+        <p data-reveal>{{ home.sentindo.texto }}</p>
+      </div>
+      <div class="sent-list">
+        <ol class="thoughts">
+{% for f in home.sentindo.frases %}
+          <li data-reveal>{{ f }}</li>
+{% endfor %}
+        </ol>
+        <div class="sent-end" data-reveal>
+          <p>{{ home.sentindo.fechamento }}</p>
+          <a data-track="whatsapp" class="btn" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp") }}{{ home.sentindo.botao }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona" class="sec sec-dark" data-header-theme="dark" data-tone="creme">
+  <div class="wrap">
+    <div class="label"><span class="n">03</span><span>Como funciona</span></div>
+    <div class="cf-head">
+      <h2 class="h2" data-reveal>{{ home.como_funciona.titulo | destaque | safe }}</h2>
+      <p data-reveal>{{ home.como_funciona.texto }}</p>
+    </div>
+    <ol class="steps">
+{% for p in home.como_funciona.passos %}
+      <li data-reveal><div class="top" aria-hidden="true"><span class="num">{{ loop.index | doisDigitos }}</span><span class="icos">{% for i in p.icones %}{{ icone(i, 32) }}{% endfor %}</span></div><h3>{{ p.titulo }}</h3><p>{{ p.texto }}</p></li>
+{% endfor %}
+    </ol>
+    <div class="actions" style="margin-top:clamp(64px,7vw,96px)" data-reveal>
+      <a data-track="whatsapp" class="btn" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp") }}{{ home.como_funciona.botao }}</a>
+      <span class="note-i">{{ home.como_funciona.nota }}</span>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas" class="sec" data-header-theme="light" data-tone="palha">
+  <div class="wrap">
+    <div class="label"><span class="n">04</span><span>Dúvidas</span></div>
+    <div class="faq-grid">
+      <div class="faq-head">
+        <h2 class="h2" data-reveal>{{ home.duvidas.titulo | destaque | safe }}</h2>
+        <p data-reveal>{{ home.duvidas.texto_antes }} <a data-track="whatsapp" class="link-u green on" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ home.duvidas.texto_link }}</a>. {{ home.duvidas.texto_depois }}</p>
+      </div>
+      {% set perguntas = home.duvidas.perguntas %}
+      {% include "perguntas.njk" %}
+    </div>
+  </div>
+</section>
+
+<section id="conteudos" class="sec" data-header-theme="light" data-tone="creme">
+  <div class="wrap">
+    <div class="label"><span class="n">05</span><span>Conteúdos</span><a class="more" href="/conteudos/">Todos os conteúdos →</a></div>
+    <div class="split">
+      <h2 class="h2" data-reveal>{{ home.conteudos.titulo | destaque | safe }}</h2>
+      <p data-reveal>{{ home.conteudos.texto }}</p>
+    </div>
+    {{ filtros("cards-home", collections.temas) }}
+      <div class="alist" id="cards-home">
+{% for a in collections.artigos | head(home.conteudos.quantidade or 6) %}
+{{ cartao(a, collections.temas) }}
+{% endfor %}
+      </div>
+      <p class="alist-all"><a class="link-u green on" href="/conteudos/">Ver todos os conteúdos →</a></p>
+      <p class="more-tema" data-more="cards-home" hidden>Mais sobre este tema: <a class="link-u green on" href="/conteudos/">Conteúdos →</a></p>
+  </div>
+</section>
+
+<section id="contato" aria-label="Contato" class="sec contato sec-dark" data-header-theme="dark" data-tone="palha">
+  <div class="wrap">
+    <div class="label"><span class="n">06</span><span>Contato</span></div>
+    <div class="contato-grid">
+      <div class="contato-info" data-reveal>
+        <a data-track="whatsapp" class="btn" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp") }}Agendar pelo WhatsApp</a>
+        <div>
+          <span class="icon big">{{ icone("local", 32) }}</span>
+          <h3>{{ home.contato.titulo_consultorio }}</h3>
+          <p class="place">{{ e.local }}</p>
+          <p class="addr">{{ e.rua }}<br>{{ e.bairro }}, {{ e.cidade }} – {{ e.uf }}, {{ e.cep }}</p>
+{% if home.contato.mostrar_fotos and home.contato.fotos | length %}
+          <figure class="cons-fotos">
+            <div class="cons-track">
+{% for f in home.contato.fotos %}
+              <img src="{{ f.imagem }}" alt="{{ f.alt }}" loading="lazy" decoding="async" width="800" height="600">
+{% endfor %}
+            </div>
+            <figcaption>{{ home.contato.legenda_fotos }}</figcaption>
+          </figure>
+{% endif %}
+          <a class="btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination={{ e.busca_mapa | enderecoUrl }}" target="_blank" rel="noopener noreferrer">{{ icone("mapa") }}Como chegar</a>
+        </div>
+        <div>
+          <h3>{{ home.contato.titulo_canais }}</h3>
+          <a data-track="whatsapp" class="channel" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp") }}<span class="k">WhatsApp</span><span class="dots"></span><span class="v">{{ site.whatsapp.exibicao }}</span></a>
+          <a class="channel" href="mailto:{{ site.email }}?subject=Contato%20pelo%20site">{{ icone("email") }}<span class="k">E-mail</span><span class="dots"></span><span class="v">{{ site.email }}</span></a>
+          <a class="channel" href="{{ site.instagram.url }}" target="_blank" rel="noopener noreferrer">{{ icone("instagram") }}<span class="k">Instagram</span><span class="dots"></span><span class="v">{{ site.instagram.usuario }}</span></a>
+        </div>
+      </div>
+      <div class="map" data-reveal><iframe title="Mapa: {{ e.local }}, {{ e.bairro }}, {{ e.cidade }}" data-src="https://www.google.com/maps?q={{ e.busca_mapa | enderecoUrl }}&amp;output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+{% endblock %}

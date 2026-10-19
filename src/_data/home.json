@@ -1,6 +1,6 @@
 {
   "hero": {
-    "titulo": "Terapia para entender o que você *sente* e mudar o que é possível mudar.",
+    "titulo": "Terapia para entender o que você *sente* e mudar o que é possível mudar!",
     "subtitulo_destaque": "Psicólogo em Goiânia · Setor Marista e online.",
     "subtitulo": "Terapia Comportamental para adultos e adolescentes, num ritmo que respeita o seu.",
     "botao": "Agendar pelo WhatsApp",
@@ -177,6 +177,7 @@
   "contato": {
     "titulo_consultorio": "Consultório",
     "titulo_canais": "Canais",
+    "mostrar_fotos": true,
     "fotos": [
       {
         "imagem": "/assets/img/consultorio-1.webp",
@@ -191,7 +192,6 @@
         "alt": "Mesa do consultório com caneca e caderno de anotações"
       }
     ],
-    "legenda_fotos": "O consultório · Instituto Afeto, Setor Marista",
-    "mostrar_fotos": true
+    "legenda_fotos": "O consultório · Instituto Afeto, Setor Marista"
   }
 }

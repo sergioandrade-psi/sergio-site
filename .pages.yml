@@ -146,7 +146,7 @@ content:
         fields:
           - { name: titulo, label: "Título", type: string, description: "Coloque *asteriscos* em volta da palavra que deve ficar em itálico verde." }
           - { name: subtitulo_destaque, label: "Subtítulo — parte em negrito", type: string }
-          - { name: subtitulo, label: "Subtítulo — continuação", type: text }
+          - { name: subtitulo, label: "Subtítulo — continuação (opcional)", type: text }
           - { name: botao, label: "Texto do botão", type: string }
           - { name: link_secundario, label: "Texto do link ao lado do botão", type: string }
           - &foto
@@ -204,22 +204,6 @@ content:
           - { name: frases, label: "Frases", type: string, list: true }
           - { name: fechamento, label: "Frase final", type: text }
           - { name: botao, label: "Texto do botão", type: string }
-      - name: como_funciona
-        label: "Como funciona"
-        type: object
-        fields:
-          - { name: titulo, label: "Título", type: string }
-          - { name: texto, label: "Texto", type: text }
-          - name: passos
-            label: "Passos"
-            type: object
-            list: { collapsible: { collapsed: true, summary: "{titulo}" } }
-            fields:
-              - { name: icones, label: "Ícones", type: select, options: { multiple: true, max: 2, values: *icones } }
-              - { name: titulo, label: "Título", type: string }
-              - { name: texto, label: "Texto", type: text }
-          - { name: botao, label: "Texto do botão", type: string }
-          - { name: nota, label: "Frase ao lado do botão", type: string }
       - name: duvidas
         label: "Dúvidas (perguntas frequentes)"
         type: object

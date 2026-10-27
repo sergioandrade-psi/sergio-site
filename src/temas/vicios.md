@@ -72,4 +72,4 @@ Em geral, as sessões são semanais e em horário fixo. Na primeira conversa, en
 
 O sigilo é especialmente importante nesse tema: o que é dito em sessão fica entre nós, como determina o Código de Ética Profissional do Psicólogo.
 
-Para agendar, basta enviar uma mensagem pelo WhatsApp. Respondo dúvidas sobre horários, valores e modalidade e combinamos a primeira sessão, sem compromisso de continuidade. Veja também [como funciona a terapia](/#como-funciona), passo a passo.
+Para agendar, basta enviar uma mensagem pelo WhatsApp. Respondo dúvidas sobre horários, valores e modalidade e combinamos a primeira sessão, sem compromisso de continuidade. Veja também [como funciona a terapia](/#duvidas), passo a passo.

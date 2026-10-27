@@ -10,7 +10,7 @@ seo_descricao: 'Como este site trata seus dados, conforme a LGPD: o que é colet
 
 ## Quem é o responsável
 
-Sérgio Andrade, psicólogo (CRP 09/011607), Rua 147, nº 299, Setor Marista, Goiânia – GO. Contato para assuntos de privacidade: [psi.sergioandrade@gmail.com](mailto:psi.sergioandrade@gmail.com).
+Sérgio Andrade, psicólogo (CRP 09/011607), Instituto Afeto, Rua 147, nº 303, Qd. 65, Lt. 11, Setor Marista, Goiânia – GO, 74170-100. Contato para assuntos de privacidade: [psi.sergioandrade@gmail.com](mailto:psi.sergioandrade@gmail.com).
 
 ## Quais dados são coletados
 

@@ -1,14 +1,14 @@
 {
   "hero": {
-    "titulo": "Terapia para entender o que você *sente* e mudar o que é possível mudar.",
-    "subtitulo_destaque": "Psicólogo em Goiânia · Setor Marista e online.",
-    "subtitulo": "Terapia Comportamental para adultos e adolescentes, num ritmo que respeita o seu.",
+    "titulo": "Psicoterapia para entender sua *essência*, digerir suas experiências, e desenvolver habilidades para lidar melhor consigo e com o mundo.",
+    "subtitulo_destaque": "Psicólogo em Goiânia – Atendimento Online e Presencial no Setor Marista.",
+    "subtitulo": "",
     "botao": "Agendar pelo WhatsApp",
-    "link_secundario": "Como funciona a terapia",
+    "link_secundario": "Perguntas frequentes",
     "foto": {
       "imagem": "/assets/img/psicologo-sergio-andrade-goiania.webp",
-      "alt": "Sérgio Andrade, psicólogo, sentado em uma poltrona clara diante de uma estante de livros, sorrindo",
-      "enquadramento": "50% 22%"
+      "alt": "Sérgio Andrade, psicólogo, sentado em uma poltrona clara em consultório com estante de livros e plantas",
+      "enquadramento": "50% 30%"
     },
     "legenda": "Sérgio Andrade · Psicólogo",
     "faixa": [
@@ -20,7 +20,7 @@
   },
   "sobre": {
     "titulo": "Prazer, sou o Sérgio.",
-    "texto": "Psicólogo há 10 anos, mestre e doutorando em Ciências da Saúde e especialista em Clínica Comportamental. Trabalho com a Terapia Comportamental, uma abordagem que busca compreender como a sua história, o seu ambiente e as suas experiências se relacionam com o que você sente e faz hoje.\n\nNa terapia, construímos juntos um entendimento claro do que está acontecendo e caminhos práticos para lidar com isso, sempre respeitando o seu ritmo. Atendo adultos e adolescentes, presencialmente no Setor Marista e online.",
+    "texto": "Psicólogo há 10 anos, mestre e doutorando em Ciências da Saúde pela Faculdade de Medicina/UFG e especialista em Clínica Comportamental.\n\nTrabalho com a Terapia Comportamental, uma abordagem que busca compreender como a sua história, suas relações e as suas experiências se relacionam com quem você é, trazendo autoconhecimento e possibilidades de mudanças desde a primeira sessão.\n\nNa terapia, construímos juntos um entendimento do que está acontecendo e, a partir do autoconhecimento buscamos caminhos práticos de como lidar melhor com a vida, sempre respeitando o seu ritmo. Atendo adultos e adolescentes, online e presencialmente no Setor Marista.",
     "titulo_formacao": "Formação",
     "formacao": [
       "Mestre em Ciências da Saúde",
@@ -29,109 +29,58 @@
     ],
     "foto": {
       "imagem": "/assets/img/sergio-andrade-psicologo-setor-marista.webp",
-      "alt": "Retrato de Sérgio Andrade com camisa de linho clara, em ambiente iluminado",
-      "enquadramento": "50% 28%"
+      "alt": "Retrato de Sérgio Andrade, psicólogo, de óculos e camisa marrom, em consultório com janela",
+      "enquadramento": "50% 35%"
     },
     "instagram_texto": "Conheça mais do meu dia a dia"
   },
   "como_trabalho": {
     "titulo": "Como eu trabalho",
-    "subtitulo": "Quatro princípios que orientam cada atendimento.",
+    "subtitulo": "Alguns princípios que orientam meu trabalho.",
     "itens": [
       {
-        "icone": "maos-coracao",
-        "titulo": "Acolhimento",
-        "texto": "Um espaço para falar do que for preciso, sem julgamento e no seu tempo."
+        "icone": "aperto-de-maos",
+        "titulo": "Transparência",
+        "texto": "Na psicoterapia nós avaliamos e discutimos juntos os rumos que devemos seguir. Essa transparência traz autonomia."
       },
       {
-        "icone": "orelha",
-        "titulo": "Escuta atenta",
-        "texto": "Atenção ao que você conta e ao contexto em que isso acontece."
+        "icone": "maos-coracao",
+        "titulo": "Um espaço acolhedor e sem julgamentos",
+        "texto": "O momento das sessões é um espaço livre para você se conhecer, longe das visões do que seria certo ou errado."
       },
       {
         "icone": "lampada",
         "titulo": "Estratégias práticas",
-        "texto": "Entendemos juntos o que mantém a dificuldade e testamos mudanças no dia a dia."
+        "texto": "Na Terapia Comportamental trabalhamos com o desenvolvimento de habilidades. É como ampliar a nossa caixa de ferramentas para lidar consigo mesmo e com o mundo."
       },
       {
-        "icone": "relogio",
-        "titulo": "Respeito ao seu tempo",
-        "texto": "Objetivos e ritmo combinados com você e revistos ao longo do processo."
+        "icone": "conversa",
+        "titulo": "Somos seres sociais",
+        "texto": "De acordo com a ciência, o nosso bem estar psicológico está intimamente ligado a qualidade das nossas relações sociais."
       }
     ]
   },
   "ajuda": {
     "titulo": "Seis temas que chegam com frequência",
-    "texto": "Cada pessoa chega com uma história própria. Estes são alguns dos assuntos que mais acompanho no consultório. Se o seu não aparece aqui, escreva mesmo assim.",
+    "texto": "Cada pessoa chega com uma história própria. Estes são alguns assuntos que mais acompanho no consultório. Se o seu não aparece aqui, podemos conversar mais detalhadamente.",
     "chamada": "Reconheceu algo seu em um desses temas? Podemos conversar.",
     "botao": "Falar pelo WhatsApp"
   },
   "sentindo": {
     "titulo": "Talvez você esteja *sentindo*…",
-    "texto": "Não é preciso estar em crise para procurar terapia. Às vezes é um incômodo que vem se acumulando, e que fica mais leve quando ganha nome.",
+    "texto": "Não é preciso estar em crise para procurar terapia. Às vezes é um incômodo que vem se acumulando, e que fica muito mais leve quando ganha nome.",
     "frases": [
       "que a cabeça não desliga, nem na hora de dormir;",
       "que vive adiando o que importa, e se cobra por isso;",
       "que está sempre cansado, mesmo depois de descansar;",
-      "que, perto dos outros, nunca sabe bem o que dizer;",
-      "que reage de um jeito e se arrepende logo depois;",
+      "que, perto dos outros, se sente desconectado e nunca sabe bem o que dizer;",
+      "que reage de um jeito e se arrepende depois;",
       "que um hábito passou a ocupar espaço demais;",
       "que as coisas perderam a graça;",
       "que algo precisa mudar, mas não sabe por onde começar."
     ],
-    "fechamento": "Se alguma dessas frases fez sentido, talvez seja um bom momento para conversar.",
+    "fechamento": "Se algum desses faz sentido, talvez seja um bom momento para conversar e entender.",
     "botao": "Falar pelo WhatsApp"
-  },
-  "como_funciona": {
-    "titulo": "Do primeiro contato à rotina das sessões",
-    "texto": "Começar terapia levanta perguntas práticas. Este é o caminho, para você saber o que esperar antes mesmo de escrever.",
-    "passos": [
-      {
-        "icones": [
-          "aviao-papel"
-        ],
-        "titulo": "O primeiro contato",
-        "texto": "Você envia uma mensagem pelo WhatsApp. Respondo dúvidas sobre valores, horários e modalidade, e combinamos a primeira sessão, sem compromisso de continuidade."
-      },
-      {
-        "icones": [
-          "aperto-de-maos"
-        ],
-        "titulo": "A primeira sessão",
-        "texto": "Uma conversa inicial para entender a sua demanda, um pouco da sua história e o que você espera. Também combinamos como o processo vai funcionar."
-      },
-      {
-        "icones": [
-          "calendario"
-        ],
-        "titulo": "Frequência e duração",
-        "texto": "Em geral, as sessões são semanais e em horário fixo. Duração e frequência são combinadas no início e podem mudar ao longo do processo, sempre em comum acordo."
-      },
-      {
-        "icones": [
-          "poltrona",
-          "notebook"
-        ],
-        "titulo": "Presencial ou online",
-        "texto": "No Instituto Afeto, no Setor Marista, ou por videochamada, de onde você estiver. É possível combinar as duas modalidades."
-      },
-      {
-        "icones": [
-          "cadeado"
-        ],
-        "titulo": "Sigilo profissional",
-        "texto": "O que é dito em sessão fica entre nós, como determina o Código de Ética Profissional do Psicólogo."
-      },
-      {
-        "icones": [
-          "recibo"
-        ],
-        "titulo": "Atendimento particular",
-        "texto": "Não atendo por convênio. A cada pagamento, emito recibo para a declaração do imposto de renda ou para pedido de reembolso ao plano."
-      }
-    ],
-    "botao": "Dar o primeiro passo",
-    "nota": "A primeira mensagem pode ser só para tirar dúvidas."
   },
   "duvidas": {
     "titulo": "Perguntas frequentes",
@@ -139,6 +88,10 @@
     "texto_link": "Pergunte pelo WhatsApp",
     "texto_depois": "Nenhuma dúvida é pequena demais.",
     "perguntas": [
+      {
+        "pergunta": "Como funcionam as sessões?",
+        "resposta": "Tudo começa com uma mensagem pelo WhatsApp, em que tiro dúvidas sobre valores, horários e modalidade. A primeira sessão é uma conversa para entender o que trouxe você até aqui e combinarmos como o processo vai funcionar, sem compromisso de continuidade. Em geral, as sessões são semanais e em horário fixo, presenciais no Instituto Afeto, no Setor Marista, ou online por videochamada. O que é dito em sessão é sigiloso, conforme o Código de Ética do Psicólogo. O atendimento é particular, com recibo para reembolso e imposto de renda."
+      },
       {
         "pergunta": "Como sei se preciso de terapia?",
         "resposta": "Não é preciso estar em crise. Se algo vem incomodando há algum tempo, afetando o sono, os estudos, o trabalho ou as relações, ou se você quer entender melhor o que sente, já é um bom motivo para conversar. A primeira sessão também serve para avaliarmos isso juntos."
@@ -177,7 +130,6 @@
   "contato": {
     "titulo_consultorio": "Consultório",
     "titulo_canais": "Canais",
-    "mostrar_fotos": true,
     "fotos": [
       {
         "imagem": "/assets/img/consultorio-1.webp",
@@ -192,6 +144,7 @@
         "alt": "Mesa do consultório com caneca e caderno de anotações"
       }
     ],
-    "legenda_fotos": "O consultório · Instituto Afeto, Setor Marista"
+    "legenda_fotos": "O consultório · Instituto Afeto, Setor Marista",
+    "mostrar_fotos": false
   }
 }

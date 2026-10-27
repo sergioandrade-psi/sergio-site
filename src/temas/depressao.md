@@ -3,7 +3,7 @@ nome: Depressão
 nome_curto: Depressão
 ordem: 2
 simbolo: nuvem
-resumo: Desânimo que se prolonga, perda de interesse pelo que antes fazia sentido, cansaço que o descanso não resolve.
+resumo: Ausência de uma visão positiva de futuro, desânimo que se prolonga, perda de interesse pelo dia a dia ou pela vida, cansaço que o descanso não resolve.
 titulo: Terapia para depressão em Goiânia
 introducao: Todo mundo tem dias tristes. Na depressão, o desânimo se prolonga, as coisas perdem a graça e até tarefas simples passam a exigir um esforço enorme. Nesta página, você encontra uma explicação acessível sobre o tema e sobre como a terapia pode ajudar a retomar a vida aos poucos.
 capa:
@@ -72,4 +72,4 @@ Em geral, as sessões são semanais e em horário fixo. Na primeira conversa, en
 
 Quando sair de casa está difícil, a terapia online pode ajudar a começar; mais adiante, as sessões presenciais podem fazer parte da própria retomada da rotina.
 
-Para agendar, basta enviar uma mensagem pelo WhatsApp. Respondo dúvidas sobre horários, valores e modalidade e combinamos a primeira sessão, sem compromisso de continuidade. Veja também [como funciona a terapia](/#como-funciona), passo a passo.
+Para agendar, basta enviar uma mensagem pelo WhatsApp. Respondo dúvidas sobre horários, valores e modalidade e combinamos a primeira sessão, sem compromisso de continuidade. Veja também [como funciona a terapia](/#duvidas), passo a passo.

@@ -19,13 +19,13 @@
   },
   "endereco": {
     "local": "Instituto Afeto",
-    "rua": "Rua 147, nº 299, Qd. 65, Lt. 11",
-    "rua_curta": "Rua 147, nº 299",
+    "rua": "Rua 147, nº 303, Qd. 65, Lt. 11",
+    "rua_curta": "Rua 147, nº 303",
     "bairro": "Setor Marista",
     "cidade": "Goiânia",
     "uf": "GO",
     "cep": "74170-100",
-    "busca_mapa": "Instituto Afeto, Rua 147, 299, Setor Marista, Goiânia - GO, 74170-100",
+    "busca_mapa": "Instituto Afeto, Rua 147, 303, Setor Marista, Goiânia - GO, 74170-100",
     "latitude": -16.7046,
     "longitude": -49.2617
   },

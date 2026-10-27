@@ -3,7 +3,7 @@ nome: Ansiedade
 nome_curto: Ansiedade
 ordem: 1
 simbolo: ondas
-resumo: Quando a preocupação ocupa mais espaço do que a situação pede, e o corpo parece viver em alerta.
+resumo: Insegurança na sua capacidade de resolver os problemas, quando a preocupação ocupa mais espaço do que a situação pede, e o corpo parece viver em alerta.
 titulo: Terapia para ansiedade em Goiânia
 introducao: A ansiedade é uma reação natural diante de algo que parece importante ou ameaçador. O problema começa quando ela aparece com frequência, dura mais do que a situação pede ou passa a decidir o que você faz e o que deixa de fazer. Aqui você encontra uma explicação clara sobre o tema e sobre como a terapia pode ajudar.
 capa:
@@ -72,4 +72,4 @@ Em geral, as sessões são semanais e em horário fixo. Na primeira conversa, en
 
 Para quem convive com ansiedade, a opção online pode ser um primeiro passo mais confortável, e é possível alternar entre as duas modalidades ao longo do processo.
 
-Para agendar, basta enviar uma mensagem pelo WhatsApp. Respondo dúvidas sobre horários, valores e modalidade e combinamos a primeira sessão, sem compromisso de continuidade. Veja também [como funciona a terapia](/#como-funciona), passo a passo.
+Para agendar, basta enviar uma mensagem pelo WhatsApp. Respondo dúvidas sobre horários, valores e modalidade e combinamos a primeira sessão, sem compromisso de continuidade. Veja também [como funciona a terapia](/#duvidas), passo a passo.

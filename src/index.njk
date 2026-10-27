@@ -17,14 +17,14 @@ floatOculto: true
     <div class="hero-grid">
       <div class="hero-text">
         <h1 class="display" data-reveal>{{ home.hero.titulo | destaque | safe }}</h1>
-        <p class="hero-sub" data-reveal><strong>{{ home.hero.subtitulo_destaque }}</strong> {{ home.hero.subtitulo }}</p>
+        <p class="hero-sub" data-reveal><strong>{{ home.hero.subtitulo_destaque }}</strong>{% if home.hero.subtitulo %} {{ home.hero.subtitulo }}{% endif %}</p>
         <div class="actions" data-reveal>
           <a data-track="whatsapp" class="btn" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp") }}{{ home.hero.botao }}</a>
-          <a class="link-u" href="#como-funciona">{{ home.hero.link_secundario }} →</a>
+          <a class="link-u" href="#duvidas">{{ home.hero.link_secundario }} →</a>
         </div>
       </div>
       <figure class="hero-fig" data-reveal>
-        <div class="frame"><div class="ph"><img src="{{ home.hero.foto.imagem }}" width="558" height="697" alt="{{ home.hero.foto.alt }}" style="object-position:{{ home.hero.foto.enquadramento or '50% 50%' }}" onerror="this.remove()" fetchpriority="high" decoding="async"></div></div>
+        <div class="frame"><div class="ph"><img src="{{ home.hero.foto.imagem }}" width="800" height="1000" alt="{{ home.hero.foto.alt }}" style="object-position:{{ home.hero.foto.enquadramento or '50% 50%' }}" onerror="this.remove()" fetchpriority="high" decoding="async"></div></div>
         <figcaption class="caps">{{ home.hero.legenda }}</figcaption>
       </figure>
     </div>
@@ -36,7 +36,7 @@ floatOculto: true
   <div class="wrap">
     <div class="label"><span class="n">01</span><span>Sobre</span></div>
     <div class="sobre-grid">
-      <figure class="sobre-fig" data-reveal><div class="frame"><div class="ph"><img src="{{ home.sobre.foto.imagem }}" width="558" height="697" alt="{{ home.sobre.foto.alt }}" style="object-position:{{ home.sobre.foto.enquadramento or '50% 50%' }}" onerror="this.remove()" loading="lazy" decoding="async"></div></div></figure>
+      <figure class="sobre-fig" data-reveal><div class="frame"><div class="ph"><img src="{{ home.sobre.foto.imagem }}" width="800" height="1000" alt="{{ home.sobre.foto.alt }}" style="object-position:{{ home.sobre.foto.enquadramento or '50% 50%' }}" onerror="this.remove()" loading="lazy" decoding="async"></div></div></figure>
       <div class="sobre-text">
         <h2 class="h2" data-reveal>{{ home.sobre.titulo | destaque | safe }}</h2>
         <div class="prose-lg" data-reveal>
@@ -111,28 +111,9 @@ floatOculto: true
   </div>
 </section>
 
-<section id="como-funciona" class="sec sec-dark" data-header-theme="dark" data-tone="creme">
+<section id="duvidas" class="sec" data-header-theme="light" data-tone="creme">
   <div class="wrap">
-    <div class="label"><span class="n">03</span><span>Como funciona</span></div>
-    <div class="cf-head">
-      <h2 class="h2" data-reveal>{{ home.como_funciona.titulo | destaque | safe }}</h2>
-      <p data-reveal>{{ home.como_funciona.texto }}</p>
-    </div>
-    <ol class="steps">
-{% for p in home.como_funciona.passos %}
-      <li data-reveal><div class="top" aria-hidden="true"><span class="num">{{ loop.index | doisDigitos }}</span><span class="icos">{% for i in p.icones %}{{ icone(i, 32) }}{% endfor %}</span></div><h3>{{ p.titulo }}</h3><p>{{ p.texto }}</p></li>
-{% endfor %}
-    </ol>
-    <div class="actions" style="margin-top:clamp(64px,7vw,96px)" data-reveal>
-      <a data-track="whatsapp" class="btn" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp") }}{{ home.como_funciona.botao }}</a>
-      <span class="note-i">{{ home.como_funciona.nota }}</span>
-    </div>
-  </div>
-</section>
-
-<section id="duvidas" class="sec" data-header-theme="light" data-tone="palha">
-  <div class="wrap">
-    <div class="label"><span class="n">04</span><span>Dúvidas</span></div>
+    <div class="label"><span class="n">03</span><span>Dúvidas</span></div>
     <div class="faq-grid">
       <div class="faq-head">
         <h2 class="h2" data-reveal>{{ home.duvidas.titulo | destaque | safe }}</h2>
@@ -144,9 +125,9 @@ floatOculto: true
   </div>
 </section>
 
-<section id="conteudos" class="sec" data-header-theme="light" data-tone="creme">
+<section id="conteudos" class="sec" data-header-theme="light" data-tone="palha">
   <div class="wrap">
-    <div class="label"><span class="n">05</span><span>Conteúdos</span><a class="more" href="/conteudos/">Todos os conteúdos →</a></div>
+    <div class="label"><span class="n">04</span><span>Conteúdos</span><a class="more" href="/conteudos/">Todos os conteúdos →</a></div>
     <div class="split">
       <h2 class="h2" data-reveal>{{ home.conteudos.titulo | destaque | safe }}</h2>
       <p data-reveal>{{ home.conteudos.texto }}</p>
@@ -164,7 +145,7 @@ floatOculto: true
 
 <section id="contato" aria-label="Contato" class="sec contato sec-dark" data-header-theme="dark" data-tone="palha">
   <div class="wrap">
-    <div class="label"><span class="n">06</span><span>Contato</span></div>
+    <div class="label"><span class="n">05</span><span>Contato</span></div>
     <div class="contato-grid">
       <div class="contato-info" data-reveal>
         <a data-track="whatsapp" class="btn" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ icone("whatsapp") }}Agendar pelo WhatsApp</a>

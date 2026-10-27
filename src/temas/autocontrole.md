@@ -70,4 +70,4 @@ Em geral, as sessões são semanais e em horário fixo. Na primeira conversa, en
 
 Muitas pessoas preferem o presencial para trabalhar esse tema; o online é uma boa alternativa para manter a regularidade quando a agenda aperta.
 
-Para agendar, basta enviar uma mensagem pelo WhatsApp. Respondo dúvidas sobre horários, valores e modalidade e combinamos a primeira sessão, sem compromisso de continuidade. Veja também [como funciona a terapia](/#como-funciona), passo a passo.
+Para agendar, basta enviar uma mensagem pelo WhatsApp. Respondo dúvidas sobre horários, valores e modalidade e combinamos a primeira sessão, sem compromisso de continuidade. Veja também [como funciona a terapia](/#duvidas), passo a passo.

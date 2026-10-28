@@ -44,3 +44,11 @@ img,iframe,video{max-width:100%}
 .sec-dark .faq button:focus-visible{outline-color:var(--limao)}
 #duvidas.sec-dark{background:#2F4423}
 #conteudos{background:var(--creme)}
+/* Correções do celular: cabeçalho fixo e menu */
+.site-header{position:fixed;top:0;left:0;right:0}
+body{padding-top:var(--hh,72px)}
+.menu-open .site-header{-webkit-backdrop-filter:none;backdrop-filter:none}
+.menu-open .site-header[data-theme="light"],.menu-open .site-header:not([data-theme="dark"]){background:var(--palha)}
+.menu-open .site-header[data-theme="dark"]{background:#2F4423}
+.mobile-menu{top:var(--hh,72px);height:calc(100dvh - var(--hh,72px));bottom:auto}
+.menu-open{overflow:hidden}

@@ -34,3 +34,13 @@ img,iframe,video{max-width:100%}
 .art-body blockquote p{margin:0}
 .art-body p:has(> em:only-child){font-size:14px;color:var(--muted)}
 .art-body p > em:only-child{font-style:normal}
+/* Dúvidas em fundo verde */
+.sec-dark .faq,.sec-dark .faq-item{border-color:rgba(251,247,236,.15)}
+.sec-dark .faq button{color:var(--creme)}
+.sec-dark .faq button:hover{color:var(--limao)}
+.sec-dark .faq .plus{color:var(--limao)}
+.sec-dark .faq-panel p,.sec-dark .faq-head p{color:rgba(251,247,236,.8)}
+.sec-dark .faq-head a.link-u{color:var(--limao)}
+.sec-dark .faq button:focus-visible{outline-color:var(--limao)}
+#duvidas.sec-dark{background:#2F4423}
+#conteudos{background:var(--creme)}

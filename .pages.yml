@@ -306,6 +306,14 @@ content:
         label: "Código do Google Analytics (opcional)"
         type: string
         description: "Ex.: G-XXXXXXXXXX. Deixe em branco para não usar."
+      - name: google_ads
+        label: "ID do Google Ads (opcional)"
+        type: string
+        description: "Ex.: AW-123456789. Deixe em branco para não usar."
+      - name: google_ads_rotulo_whatsapp
+        label: "Rótulo da conversão 'Contato WhatsApp' (opcional)"
+        type: string
+        description: "O texto depois da barra no código do Google Ads, ex.: AbC-D_efG-h12_34-567"
       - name: rodape
         label: "Rodapé"
         type: object

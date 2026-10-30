@@ -28,9 +28,10 @@
 <meta name="twitter:title" content="{{ seo_titulo }}">
 <meta name="twitter:description" content="{{ seo_descricao }}">
 <meta name="twitter:image" content="{{ site.url }}{{ site.seo.imagem_compartilhamento }}">
-{% if site.analytics_ga4 %}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics_ga4 }}"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site.analytics_ga4 }}',{anonymize_ip:true});</script>
+{% set gid = site.analytics_ga4 or site.google_ads %}
+{% if gid %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ gid }}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());{% if site.analytics_ga4 %}gtag('config','{{ site.analytics_ga4 }}',{anonymize_ip:true});{% endif %}{% if site.google_ads %}gtag('config','{{ site.google_ads }}');{% endif %}</script>
 {% endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,6 +50,6 @@
 </main>
 {% include "rodape.njk" %}
 <a data-track="whatsapp" class="float-wa{% if floatOculto %} is-hidden{% endif %}"{% if floatOculto %} tabindex="-1"{% endif %} href="{{ site | whatsapp(assunto_whatsapp) }}" target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp">{{ icone("whatsapp", 28) }}<span class="txt">WhatsApp</span></a>
-<script>document.addEventListener('click',function(e){var a=e.target.closest('[data-track="whatsapp"]');if(!a)return;var s=a.closest('section[id],header,footer');var o=a.classList.contains('float-wa')?'botao-flutuante':s?(s.id||s.tagName.toLowerCase()):'pagina';var d={secao:o,pagina:location.pathname};if(window.gtag)gtag('event','clique_whatsapp',d);if(window.plausible)plausible('clique_whatsapp',{props:d});(window.dataLayer=window.dataLayer||[]).push(Object.assign({event:'clique_whatsapp'},d));});</script>
+<script>document.addEventListener('click',function(e){var a=e.target.closest('[data-track="whatsapp"]');if(!a)return;var s=a.closest('section[id],header,footer');var o=a.classList.contains('float-wa')?'botao-flutuante':s?(s.id||s.tagName.toLowerCase()):'pagina';var d={secao:o,pagina:location.pathname};if(window.gtag){gtag('event','clique_whatsapp',d);{% if site.google_ads and site.google_ads_rotulo_whatsapp %}gtag('event','conversion',{send_to:'{{ site.google_ads }}/{{ site.google_ads_rotulo_whatsapp }}'});{% endif %}}if(window.plausible)plausible('clique_whatsapp',{props:d});(window.dataLayer=window.dataLayer||[]).push(Object.assign({event:'clique_whatsapp'},d));});</script>
 </body>
 </html>

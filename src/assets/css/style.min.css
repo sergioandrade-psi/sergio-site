@@ -52,3 +52,5 @@ body{padding-top:var(--hh,72px)}
 .menu-open .site-header[data-theme="dark"]{background:#2F4423}
 .mobile-menu{top:var(--hh,72px);height:calc(100dvh - var(--hh,72px));bottom:auto}
 .menu-open{overflow:hidden}
+.hero{padding-top:clamp(28px,3.5vw,56px)}
+@media (min-width:820px){.hero-grid{align-items:center}.hero-fig{max-width:min(400px,calc((100svh - var(--hh,72px) - 140px)*.8))}}

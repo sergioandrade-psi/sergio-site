@@ -60,3 +60,7 @@ body{padding-top:var(--hh,72px)}
 .sec-dark .principios .t{color:var(--creme)}
 .sec-dark .principios .icon{color:var(--limao)}
 #ajuda{background:var(--creme)}
+#duvidas{background:var(--creme)}
+#sentindo.sec-dark,#conteudos.sec-dark{--tinta:#FBF7EC;--muted:rgba(251,247,236,.78);--linha:rgba(251,247,236,.18);--verde:#B7C34A;background:#2F4423;color:var(--creme)}
+#sentindo.sec-dark .sent-list .sent-end .btn,#conteudos.sec-dark .btn{color:#2F4423}
+#contato{background:var(--palha)}

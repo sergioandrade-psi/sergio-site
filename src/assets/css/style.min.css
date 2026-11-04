@@ -54,3 +54,9 @@ body{padding-top:var(--hh,72px)}
 .menu-open{overflow:hidden}
 .hero{padding-top:clamp(28px,3.5vw,56px)}
 @media (min-width:820px){.hero-grid{align-items:center}.hero-fig{max-width:min(400px,calc((100svh - var(--hh,72px) - 140px)*.8))}}
+.princ-sec.sec-dark{background:#2F4423}
+.sec-dark .princ-head h3{color:var(--creme)}
+.sec-dark .princ-head p,.sec-dark .principios .d{color:rgba(251,247,236,.8)}
+.sec-dark .principios .t{color:var(--creme)}
+.sec-dark .principios .icon{color:var(--limao)}
+#ajuda{background:var(--creme)}

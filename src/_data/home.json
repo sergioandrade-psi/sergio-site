@@ -2,7 +2,6 @@
   "hero": {
     "titulo": "Psicoterapia para entender sua *essência*, digerir suas experiências, e desenvolver habilidades para lidar melhor consigo e com o mundo.",
     "subtitulo_destaque": "Psicólogo em Goiânia – Atendimento Online e Presencial no Setor Marista.",
-    "subtitulo": "",
     "botao": "Agendar pelo WhatsApp",
     "link_secundario": "Perguntas frequentes",
     "foto": {
@@ -28,7 +27,7 @@
       "Especialista em Clínica Comportamental"
     ],
     "foto": {
-      "imagem": "/assets/img/sergio-andrade-psicologo-setor-marista.webp",
+      "imagem": "/assets/img/WhatsApp Image 2026-11-03 at 19.23.00.jpeg",
       "alt": "Retrato de Sérgio Andrade, psicólogo, de óculos e camisa marrom, em consultório com janela",
       "enquadramento": "50% 35%"
     },
@@ -130,6 +129,7 @@
   "contato": {
     "titulo_consultorio": "Consultório",
     "titulo_canais": "Canais",
+    "mostrar_fotos": false,
     "fotos": [
       {
         "imagem": "/assets/img/consultorio-1.webp",
@@ -144,7 +144,6 @@
         "alt": "Mesa do consultório com caneca e caderno de anotações"
       }
     ],
-    "legenda_fotos": "O consultório · Instituto Afeto, Setor Marista",
-    "mostrar_fotos": false
+    "legenda_fotos": "O consultório · Instituto Afeto, Setor Marista"
   }
 }
